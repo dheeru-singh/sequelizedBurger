@@ -6,6 +6,10 @@
 // =============================================================
 var Burger = require("../models/burger.js");
 
+var db = require("../models");
+
+// Routes
+// =============================================================
 
 // Routes
 // =============================================================
@@ -18,7 +22,7 @@ module.exports = function(app) {
     // Sequelize queries are asynchronous, which helps with perceived speed.
     // If we want something to be guaranteed to happen after the query, we'll use
     // the .then function
-    Burger.findAll({ }).then(function(results) {
+    db.Burger.findAll({ }).then(function(results) {
       // results are available to us inside the .then
       res.json(results);
     });
@@ -30,7 +34,7 @@ module.exports = function(app) {
 
     console.log(req.body);
 
-    Burger.create({
+    db.Burger.create({
       burger_name: req.body.burger_name,
       devoured: req.body.devoured,
       created_at: req.body.created_at,
@@ -63,7 +67,7 @@ module.exports = function(app) {
     
     var inputval = Object.keys(req.body)[0]
     console.log(inputval);
-    Burger.update({
+    db.Burger.update({
       devoured: true,
       burger_name: inputval,
     },{
