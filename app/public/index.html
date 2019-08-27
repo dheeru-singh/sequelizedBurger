@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Chirpy!</title>
+
+    <!-- Bootstrap CSS and js-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+    <div class="top-bar"><h1>Eat-Da-Burger</h1></div>
+    <div class="container text-center">
+      <div class="top-section">
+        <img src="/images/burger.png" class="img-fluid">
+      </div>
+      <div class="row ">
+    <div class="col-sm-6 not-devored-section">
+      <h2>Waiting for Devoured!</h2>
+      <ul>
+            
+      </ul>
+    </div>
+  
+    <div class="col-sm-6 devored-section">
+      <h2>Devoured!</h2>
+      <ul>
+          
+      </ul>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="form-section">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+  
+        <div class="form-group">
+          <label for="brgr">Burger Name:</label>
+          <input type="text" id="brgr" name="name" class="form-control">
+        </div>
+  
+        <button type="submit"  id="burger-submit" class="btn btn-block">Add Burger</button>
+      </form>
+      </div>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+    </div>
+   
+<!--Modal popup for alertModel for user name form-->
+<div class="modal fade" id="alertModel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4 class="text-center">Plese Enter Your Name before Divour it! </h4>
+       
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-theme" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!--Modal popup for alertburgerName for user name form-->
+<div class="modal fade" id="alertburgerName">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4 class="text-center">Plese Enter Burger Name! </h4>
+       
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-theme" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="js/burger.js"></script>
+
+  </body>
+</html>
