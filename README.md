@@ -20,6 +20,6 @@
 * Sequelizer
 
 ## Demo
-![Eat-Da-Burger!](public/assets/images/sequal-burger.png)
+![Eat-Da-Burger!](public/images/sequal-burger.png)
 
 #### [See Live Demo](https://immense-springs-37360.herokuapp.com)
