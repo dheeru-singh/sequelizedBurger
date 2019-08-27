@@ -15,13 +15,8 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // Get all chirps
+  // Get all burger
   app.get("/api/all", function(req, res) {
-
-    // Finding all Chirps, and then returning them to the user as JSON.
-    // Sequelize queries are asynchronous, which helps with perceived speed.
-    // If we want something to be guaranteed to happen after the query, we'll use
-    // the .then function
     db.Burger.findAll({ }).then(function(results) {
       // results are available to us inside the .then
       res.json(results);
@@ -29,41 +24,26 @@ module.exports = function(app) {
 
   });
 
-  // Add a chirp
+  // Add a burger
   app.post("/api/new", function(req, res) {
-
-    console.log(req.body);
-
+    //console.log(req.body);
     db.Burger.create({
       burger_name: req.body.burger_name,
       devoured: req.body.devoured,
       created_at: req.body.created_at,
       id: req.body.id
-     
     }).then(function(results) {
-      // `results` here would be the newly created chirp
+      // `results` here would be the newly created burger
       // res.end();
       res.json(results);
     });
 
   });
 
-  
-
-  // app.put("/api/burgers/:id", function (req, res, next) {
-  //   Burger.update(
-  //     {devoured: true},
-  //     {returning: true, where: {id: req.params.id} }
-  //   )
-  //   .then(function([ rowsUpdate, [updatedBurger] ]) {
-  //     res.json(updatedBurger)
-  //   })
-  //   .catch(next)
-  //  })
 
    app.put("/api/burgers/:id", function(req, res) {
     // Use the sequelize update method to update a todo to be equal to the value of req.body
-    // req.body will contain the id of the todo we need to update
+    // req.body will contain the id of the burger we need to update
     
     var inputval = Object.keys(req.body)[0]
     console.log(inputval);
